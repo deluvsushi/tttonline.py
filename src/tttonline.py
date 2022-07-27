@@ -79,7 +79,7 @@ class TTTOnline:
 			f"{self.api}/send_token.php?pemail={email}&pname={username}",
 			headers=self.headers).json()
 
-	def set_champions(self, player_id: int, win: bool = True):
+	def set_champions(self, player_id: int):
 		return requests.get(
 			f"{self.api}/set_champions.php?pid1={player_id}&pid2={player_id}",
 			headers=self.headers).json()
